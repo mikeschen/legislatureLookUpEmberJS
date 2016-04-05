@@ -6,7 +6,8 @@ export default Ember.Route.extend({
       this.transitionTo('results', params.bill);
     },
     zipLookup(params) {
-      this.transitionTo('zipcoderesults', params.zip);
+      console.log("ziplookup", params);
+      this.transitionTo('zipcoderesults', params.latitude, params.longitude);
     }
   }
 });

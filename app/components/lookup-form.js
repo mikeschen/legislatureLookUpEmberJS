@@ -6,8 +6,10 @@ export default Ember.Component.extend({
     zipLookup() {
       var params = {
         longitude: this.get('longitude'),
-        latitude: this.get('latitude')
+        latitude: this.get('latitude'),
+
       };
+      console.log("params", params);
       this.sendAction('zipLookup', params);
     }
   }
