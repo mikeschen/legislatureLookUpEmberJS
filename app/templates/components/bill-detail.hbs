@@ -1,8 +1,9 @@
 {{#if addMoreInfo}}
-  <li>{{bill.number}} - {{bill.short_title}}</li>
-  <li>{{bill.official_title}}</li>
-  <li><a href= {{bill.last_version.urls.html}}>Read More</a></li>
+  <h4>{{bill.number}} - {{bill.short_title}}</h4>
+  <h5>{{bill.official_title}}</h5>
+  <h5>{{fullName}}</h5>
+  <h5><a href= {{bill.last_version.urls.html}}>Read More</a></h5>
 {{else}}
-  <li>{{bill.number}} - {{bill.short_title}}</li>
+  <h4>{{bill.number}} - {{bill.short_title}}</h4>
   <button {{action 'infoFormShow'}}>More Info</button>
 {{/if}}
