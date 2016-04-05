@@ -2,7 +2,7 @@
   <h4>{{bill.number}} - {{bill.short_title}}</h4>
   <h5>{{bill.official_title}}</h5>
   <h5>{{fullName}}</h5>
-  <h5><a href= {{bill.last_version.urls.html}}>Read More</a></h5>
+  <h5><a href= {{bill.urls.govtrack}}>Read More</a></h5>
 {{else}}
   <h4>{{bill.number}} - {{bill.short_title}}</h4>
   <button {{action 'infoFormShow'}}>More Info</button>
