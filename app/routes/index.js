@@ -9,10 +9,13 @@ export default Ember.Route.extend({
     zipLookup(params) {
       console.log("ziplookup", params);
       this.transitionTo('zipcoderesults', params.latitude, params.longitude);
-      new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8
-    });
-      }
+      var container = this.$('.map-display')[0];
+      console.log("showMap", params);
+      var options = {
+        center: this.get('map').center('params.latitude', 'params.longitude'),
+        zoom: 15
+      };
+      this.get('map').findMap(container, options);
+    }
     },
 });
