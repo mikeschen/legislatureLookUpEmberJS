@@ -1,0 +1,6 @@
+<h2>Bill Search Results</h2>
+<ul>
+  {{#each model as |bill|}}
+    <li>{{bill.number}} - {{bill.short_title}}: {{bill.official_title}}</li>
+  {{/each}}
+</ul>
